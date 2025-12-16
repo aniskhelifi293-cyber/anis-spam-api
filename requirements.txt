@@ -5,3 +5,4 @@ datetime
 fastapi
 asyncio
 httpx
+uvicorn
