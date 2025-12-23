@@ -67,6 +67,9 @@ async def send_one_request(uid: str, password: str, target_uid: str, client: htt
 # -----------------------
 # نقاط نهاية API (Endpoints)
 # -----------------------
+@app.route('/ping')
+def ping():
+    return jsonify({"status": "alive"}), 200
 @app.get("/")
 async def root():
     return {"message": "Ultra-Fast Spammer is running"}
@@ -137,3 +140,4 @@ async def get_accounts():
 if __name__ == "__main__":
 
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
